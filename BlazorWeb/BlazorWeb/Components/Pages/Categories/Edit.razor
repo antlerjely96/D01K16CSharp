@@ -1,0 +1,43 @@
+﻿@page "/Categories/{Id:int}/Update"
+@using BlazorWeb.Models
+@using BlazorWeb.Services.Category
+@inject ICategoryService CategoryService
+@rendermode InteractiveServer
+<h3>Update</h3>
+
+<EditForm Model="_category" FormName="updateCategory" OnValidSubmit="SaveCategory">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label>Name: </label>
+        <InputText @bind-Value="_category.Name"/>
+    </div>
+    
+    <div class="form-group">
+        <label>Description: </label>
+        <InputText @bind-Value="_category.Description"/>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</EditForm>
+
+@code {
+    public Category _category = new Category();
+    [Inject] NavigationManager Navigation { get; set; }
+    [Parameter] public int Id { get; set; }
+    
+    //function tu dong load khi goi component
+    protected override async Task OnInitializedAsync()
+    {
+        _category = await CategoryService.GetCategoryByIdAsync(Id);
+    }
+
+    private async Task SaveCategory()
+    {
+        _category.Id = Id;
+        await CategoryService.UpdateCategoryAsync(_category);
+        //Quay ve danh sach
+        Navigation.NavigateTo("/Categories", true);
+    }
+}
