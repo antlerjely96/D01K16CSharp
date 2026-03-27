@@ -1,6 +1,7 @@
 using BlazorWeb.Components;
 using BlazorWeb.Data;
 using BlazorWeb.Services.Category;
+using BlazorWeb.Services.Product;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 //
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

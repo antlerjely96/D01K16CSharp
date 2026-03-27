@@ -9,4 +9,6 @@ public class Category
     [Required (ErrorMessage = "Fill the name")]
     public String Name { get; set; }
     public String Description { get; set; }
+
+    public ICollection<Product> Products { get; set; } = new List<Product>();
 }

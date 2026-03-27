@@ -1,0 +1,51 @@
+﻿@page "/Products"
+@rendermode InteractiveServer
+@using BlazorWeb.Models
+@using BlazorWeb.Services.Product
+@inject IProductService ProductService
+<h3>Products</h3>
+
+<a href="/Products/Create" class="btn btn-primary">Add product</a>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in _products)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@product.Quantity</td>
+            <td>@product.category.Name</td>
+            <td>
+                <a href="/Products/@product.Id/Edit" class="btn btn-secondary">Edit</a>
+                <button class="btn btn-danger" @onclick="() => DeleteProduct(product.Id)">Delete</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+    List<Product> _products = new List<Product>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _products = await ProductService.GetAllProductAsync();
+    }
+
+    private async Task DeleteProduct(int Id)
+    {
+        await ProductService.DeleteProductAsync(Id);
+        _products = await ProductService.GetAllProductAsync();
+    }
+}

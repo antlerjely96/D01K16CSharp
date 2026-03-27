@@ -12,6 +12,7 @@ public class AppDbContext : DbContext
     }
     
     public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
 
     //Merge model voi bang trong db
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +26,17 @@ public class AppDbContext : DbContext
                 //Merge attr voi column
                 entity.Property(e => e.Name).HasColumnName("name");
                 entity.Property(e => e.Description).HasColumnName("description");
+            }
+        );
+
+        modelBuilder.Entity<Product>(entity =>
+            {
+                entity.ToTable("products");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Name).HasColumnName("name");
+                entity.Property(e => e.Price).HasColumnName("price");
+                entity.Property(e => e.Quantity).HasColumnName("Quantity");
+                entity.Property(e => e.CategoryId).HasColumnName("category_id");
             }
         );
     }
