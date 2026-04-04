@@ -1,0 +1,45 @@
+﻿@page "/Admin/Login"
+[AllowAnonymous]
+@using BlazorWeb.Models
+@using BlazorWeb.Services.Admins
+@using Components.Layout
+@layout LoginLayout
+@using Microsoft.AspNetCore.Authorization
+@using Components.Authentication
+@using Microsoft.AspNetCore.Components.Authorization
+@inject IAuthService AuthService
+@inject AuthenticationStateProvider AuthStateProvide
+<h3>Login</h3>
+
+<EditForm FormName="LoginForm" Model="LoginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator/>
+    <div class="form-group">
+        <label>Email</label>
+        <InputText @bind-Value="LoginModel.Email" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <InputText @bind-Value="LoginModel.Password" type="password" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+            Login
+        </button>
+    </div>
+</EditForm>
+
+@code {
+    private Admin LoginModel = new Admin();
+    [Inject] NavigationManager _navigationManager { get; set; }
+
+    private async Task HandleLogin()
+    {
+        bool isValid = await AuthService.ValidateAdminAuthAsync(LoginModel.Email, LoginModel.Password);
+        if(isValid)
+        {
+            var adminAuthStateProvider = (AdminAuthStateProvider)AuthStateProvide;
+            await adminAuthStateProvider.MarkAdminAsAuthenticatedAsync(LoginModel.Email);
+            _navigationManager.NavigateTo("/Categories", true);
+        }
+    }
+}

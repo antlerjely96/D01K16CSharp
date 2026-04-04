@@ -1,7 +1,10 @@
 using BlazorWeb.Components;
+using BlazorWeb.Components.Authentication;
 using BlazorWeb.Data;
+using BlazorWeb.Services.Admins;
 using BlazorWeb.Services.Category;
 using BlazorWeb.Services.Product;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +19,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<AuthenticationStateProvider, AdminAuthStateProvider>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddCascadingAuthenticationState();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

@@ -13,6 +13,8 @@ public class AppDbContext : DbContext
     
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    
+    public DbSet<Admin> Admins { get; set; }
 
     //Merge model voi bang trong db
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -39,5 +41,13 @@ public class AppDbContext : DbContext
                 entity.Property(e => e.CategoryId).HasColumnName("category_id");
             }
         );
+
+        modelBuilder.Entity<Admin>(entity =>
+        {
+            entity.ToTable("admins");
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Email).HasColumnName("email");
+            entity.Property(e => e.Password).HasColumnName("password");
+        });
     }
 }

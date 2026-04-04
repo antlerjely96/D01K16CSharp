@@ -8,23 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e9ccb2a-d614-42c1-80bd-f7dc6130474d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorWeb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorWeb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Components/Layout/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Data/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/bin/Debug/net8.0/BlazorWeb.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/BlazorWeb.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/ref/BlazorWeb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/ref/BlazorWeb.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/refint/BlazorWeb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/obj/Debug/net8.0/refint/BlazorWeb.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773989887307</updated>
       <workItem from="1773989897401" duration="7676000" />
-      <workItem from="1774574764199" duration="3622000" />
+      <workItem from="1774574764199" duration="5400000" />
     </task>
     <servers />
   </component>
